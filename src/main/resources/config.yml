@@ -1,1 +1,3 @@
-death-broadcast-message: '&4&lF'
+death-broadcast-message:
+  - '&4&lF'
+# - '&6What a noob %player% is'
