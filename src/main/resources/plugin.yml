@@ -1,0 +1,7 @@
+name: DeathBroadcast
+version: '${version}'
+main: me.intrinix.deathbroadcast.DeathBroadcast
+api-version: 1.17
+authors: [ Intrinix ]
+description:
+  'A simple plugin that broadcast a message [default: F] when a player dies'
