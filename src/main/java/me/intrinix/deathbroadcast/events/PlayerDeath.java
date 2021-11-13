@@ -23,15 +23,13 @@ public class PlayerDeath implements Listener {
         Player player = event.getEntity().getPlayer();
         assert player != null;
         String playerName = player.getDisplayName();
-        String defaultBroadcastMsg = "&4&lF";
-        defaultBroadcastMsg = ChatColor.translateAlternateColorCodes('&', defaultBroadcastMsg);
+        String defaultBroadcastMsg = ChatColor.translateAlternateColorCodes('&', "&4&lF");
         String deathBroadcastMsg = plugin.getConfig().getString("death-broadcast-message");
         if(deathBroadcastMsg != null){
             deathBroadcastMsg = ChatColor.translateAlternateColorCodes('&', deathBroadcastMsg);
             if(deathBroadcastMsg.contains("%player%")){
                 deathBroadcastMsg = deathBroadcastMsg.replaceAll("%player%", playerName);
             }
-
             if(deathBroadcastMsg.isEmpty()){
                 Bukkit.broadcastMessage(PREFIX + " " + defaultBroadcastMsg);
             } else {
